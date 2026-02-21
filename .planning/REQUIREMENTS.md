@@ -12,8 +12,8 @@ Requirements for certification completion. Each maps to roadmap phases.
 - [x] **LAND-01**: Landing page displays with login/register links and app branding
 - [x] **AUTH-01**: User can login with username and password
 - [x] **AUTH-02**: Password is hashed using password_hash() before storage
-- [ ] **AUTH-03**: User can logout from any authenticated page
-- [ ] **AUTH-04**: User can change their password after login
+- [x] **AUTH-03**: User can logout from any authenticated page
+- [x] **AUTH-04**: User can change their password after login
 - [x] **AUTH-05**: Session persists across page navigation
 
 ### Role Management
@@ -88,8 +88,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LAND-01 | Phase 1 | Complete |
 | AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 1 | Complete |
-| AUTH-03 | Phase 1 | Pending |
-| AUTH-04 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Complete |
+| AUTH-04 | Phase 1 | Complete |
 | AUTH-05 | Phase 1 | Complete |
 | ROLE-01 | Phase 1 | Pending |
 | ROLE-02 | Phase 1 | Pending |
