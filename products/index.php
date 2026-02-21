@@ -166,9 +166,14 @@ if (!$result) {
             </div>
         </div>
     </div>
-</div>
+</div><!-- /.col-12 -->
+</div><!-- /.row -->
+</div><!-- /.container-fluid -->
 
-<!-- Delete Confirmation Modal (outside main-content to avoid overflow:hidden) -->
+</div><!-- /.main-content -->
+</main>
+
+<!-- Delete Confirmation Modal (after main, before footer) -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" data-bs-backdrop="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow" style="z-index: 1055;">
@@ -198,9 +203,6 @@ if (!$result) {
     </div>
 </div>
 
-</div><!-- /.main-content -->
-</main>
-
 <?php include '../includes/footer.php'; ?>
 
 <!-- DataTables Initialization with Indonesian Localization -->
@@ -215,7 +217,9 @@ $(document).ready(function() {
         lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]],
         order: [[0, 'asc']],
         columnDefs: [
-            { orderable: false, targets: [7] }
+            { orderable: false, targets: [7] },
+            { width: '50px', targets: [0] }, // No column
+            { width: '150px', targets: [6, 7] } // Status and Actions
         ],
         responsive: true,
         dom: '<"row"<"col-md-6"l><"col-md-6"f>>rtip',
