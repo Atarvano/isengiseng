@@ -45,6 +45,14 @@ Enable cashiers to process sales transactions quickly while providing administra
 - Charts: Chart.js
 - Environment: Laragon (Windows, Apache, MySQL)
 
+**Laragon Workflow:**
+- Project location: `C:\laragon\www\QwenSertifikasi`
+- Access URL: `http://localhost` or `http://QwenSertifikasi.test` (pretty URLs)
+- Database: MySQL via phpMyAdmin at `http://localhost/phpmyadmin`
+- Services: Start/Stop Apache & MySQL from Laragon Dashboard
+- PHP Version: Switchable via Menu > PHP > Version
+- Mail: Mailpit for email testing (if needed)
+
 **Database Tables Required:**
 - users (authentication & roles)
 - barang (products)
