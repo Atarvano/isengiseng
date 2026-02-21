@@ -233,7 +233,7 @@ $(document).ready(function() {
         
         const modal = $(this);
         modal.find('#productName').text(productName);
-        modal.find('#confirmDelete').attr('href', 'delete.php?id=' + productId);
+        modal.find('#confirmDelete').attr('href', 'actions.php?action=delete&id=' + productId);
     });
 });
 </script>
