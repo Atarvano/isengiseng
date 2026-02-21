@@ -1194,6 +1194,35 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
+/* ===== Auth Pages - Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .auth-split-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-illustration-panel {
+        display: none;
+    }
+    
+    .auth-form-panel {
+        width: 100%;
+        max-width: 100%;
+        padding: var(--space-2xl) var(--space-lg);
+    }
+    
+    .auth-form-container {
+        max-width: 100%;
+    }
+    
+    .back-to-home {
+        position: fixed;
+        top: var(--space-md);
+        left: var(--space-md);
+        padding: var(--space-xs) var(--space-md);
+        font-size: 0.875rem;
+    }
+}
+
 /* ===== Dashboard & Sidebar ===== */
 .dashboard-wrapper {
     display: flex;
