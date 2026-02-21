@@ -10,9 +10,9 @@
 $username = $_SESSION['username'] ?? 'Guest';
 ?>
 
-        </div><!-- /.main-content -->
-        
-        <!-- Dashboard Footer -->
+            </main><!-- /.main-content -->
+            
+            <!-- Dashboard Footer -->
         <footer class="dashboard-footer">
             <div class="container-fluid">
                 <div class="row align-items-center">

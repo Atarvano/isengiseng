@@ -81,3 +81,6 @@ $initials = strtoupper(substr($username, 0, 2));
                     </div>
                 </div>
             </nav>
+            
+            <!-- Main Content -->
+            <main class="main-content">
