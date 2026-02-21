@@ -1,12 +1,9 @@
 <?php
 /**
  * Common Header for Authenticated Pages
+ * SMK Certification Quality
  * 
- * Included at the top of every protected page.
- * Handles authentication check and renders HTML header with navigation.
- * 
- * @see includes/session_config.php Session security configuration
- * @see includes/auth_check.php Authentication middleware
+ * Includes top navbar with user profile, notifications, and hamburger menu.
  */
 
 // Include authentication check (includes session_config.php)
@@ -15,6 +12,7 @@ require_once 'auth_check.php';
 // Get user info
 $username = $_SESSION['username'] ?? 'User';
 $role = $_SESSION['user_role'] ?? 'cashier';
+$initials = strtoupper(substr($username, 0, 2));
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -23,10 +21,10 @@ $role = $_SESSION['user_role'] ?? 'cashier';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KasirKu - Dashboard</title>
     
-    <!-- Google Fonts: DM Sans (Display) + Lexend (Body) -->
+    <!-- Google Fonts: Plus Jakarta Sans + Satoshi -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,3 +42,37 @@ $role = $_SESSION['user_role'] ?? 'cashier';
         
         <!-- Main Content Area -->
         <div class="main-content">
+            <!-- Top Navbar -->
+            <nav class="top-navbar">
+                <div class="top-navbar-left">
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle" onclick="toggleSidebar()">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    
+                    <!-- Page Title (Optional, can be customized per page) -->
+                    <div>
+                        <h5 style="margin: 0; font-family: var(--font-display); font-weight: 700;">Dashboard</h5>
+                        <small style="color: var(--slate-500); font-size: 0.85rem;">Selamat datang kembali</small>
+                    </div>
+                </div>
+                
+                <div class="top-navbar-right">
+                    <!-- Notifications -->
+                    <button class="nav-notification" title="Notifikasi">
+                        <i class="bi bi-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                    
+                    <!-- User Menu -->
+                    <div class="user-menu">
+                        <div class="user-avatar">
+                            <?php echo $initials; ?>
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name"><?php echo htmlspecialchars($username); ?></span>
+                            <span class="user-role"><?php echo ucfirst($role); ?></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>

@@ -1,11 +1,9 @@
 <?php
 /**
  * Cashier Dashboard Home Page
+ * SMK Certification Quality
  * 
  * Main dashboard for cashiers with transaction-focused workflow.
- * Accessible by all authenticated users (admin can access too).
- * 
- * @package MiniCashier
  */
 
 // Require authentication (any logged-in user can access)
@@ -131,8 +129,8 @@ $username = $_SESSION['username'] ?? 'User';
                 <tbody>
                     <tr>
                         <td colspan="5" class="text-center text-muted py-5">
-                            <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--stone-100); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-inbox fs-2" style="color: var(--stone-400);"></i>
+                            <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--slate-100); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-inbox fs-2" style="color: var(--slate-400);"></i>
                             </div>
                             <p class="mb-0">Belum ada transaksi. Mulai dengan membuat transaksi baru!</p>
                         </td>

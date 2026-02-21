@@ -1,12 +1,10 @@
 <?php
 /**
  * User Profile Page
+ * SMK Certification Quality
  * 
  * Displays user information with role badge and provides access to
  * change password and logout functionality.
- * Accessible by all authenticated users.
- * 
- * @package MiniCashier
  */
 
 // Require authentication
@@ -104,8 +102,8 @@ $initials = strtoupper(substr($username, 0, 2));
                     
                     <div class="col-md-6">
                         <div class="d-flex align-items-start">
-                            <div class="icon-box me-3" style="width: 48px; height: 48px; background: var(--stone-100); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <i class="bi bi-activity fs-4" style="color: var(--stone-600);"></i>
+                            <div class="icon-box me-3" style="width: 48px; height: 48px; background: var(--slate-100); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="bi bi-activity fs-4" style="color: var(--slate-600);"></i>
                             </div>
                             <div>
                                 <h6 class="text-muted mb-1 fw-normal">Status</h6>

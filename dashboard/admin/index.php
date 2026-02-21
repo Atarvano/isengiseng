@@ -1,11 +1,9 @@
 <?php
 /**
  * Admin Dashboard Home Page
+ * SMK Certification Quality
  * 
  * Main dashboard for administrators with overview widgets and quick actions.
- * Requires admin role - access denied for cashiers.
- * 
- * @package MiniCashier
  */
 
 // Require admin role - redirects with 403 if not admin

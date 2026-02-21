@@ -1,12 +1,9 @@
 <?php
 /**
  * Login Page - KasirKu
+ * SMK Certification Quality
  * 
- * Modern authentication with secure credential validation.
- * Professional design for Indonesian POS system.
- * 
- * @link config/database.php Database connection
- * @link includes/session_config.php Session initialization
+ * Modern 50:50 split layout with illustration and login form.
  */
 
 // Include required files
@@ -78,146 +75,184 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masuk - KasirKu</title>
     
-    <!-- Google Fonts: DM Sans (Display) + Lexend (Body) - Modern Indonesian Tech -->
+    <!-- Google Fonts: Plus Jakarta Sans + Satoshi -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5.3.8 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <!-- Custom Styles -->
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="auth-page-container">
-        <!-- Decorative Elements -->
-        <div class="auth-decoration">
-            <div class="decoration-circle decoration-1"></div>
-            <div class="decoration-circle decoration-2"></div>
-            <div class="decoration-circle decoration-3"></div>
-        </div>
-        
-        <!-- Login Card -->
-        <div class="auth-card-modern">
-            <div class="auth-card-header">
-                <div class="brand-logo-small mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="logo-icon-small">
-                        <defs>
-                            <linearGradient id="logoGradientSmall" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <rect x="8" y="8" width="48" height="48" rx="12" fill="url(#logoGradientSmall)"/>
-                        <path d="M20 32 L28 40 L44 24" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    </svg>
-                </div>
-                <h1 class="auth-title">Selamat Datang Kembali</h1>
-                <p class="auth-subtitle">Masuk untuk mengelola toko Anda</p>
-            </div>
+    <div class="auth-split-container">
+        <!-- Left Panel: Illustration -->
+        <div class="auth-illustration-panel">
+            <a href="../index.php" class="back-to-home">
+                <i class="bi bi-arrow-left"></i>
+                Kembali ke Beranda
+            </a>
             
-            <?php if (!empty($error)): ?>
-                <div class="alert-modern alert-error">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="12" y1="8" x2="12" y2="12"/>
-                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+            <div class="illustration-content">
+                <div class="illustration-graphic">
+                    <!-- POS System Illustration SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+                        <!-- Background Circle -->
+                        <circle cx="100" cy="100" r="90" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                        
+                        <!-- Computer Monitor -->
+                        <rect x="50" y="60" width="100" height="70" rx="4" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="2"/>
+                        <rect x="55" y="65" width="90" height="55" rx="2" fill="rgba(255,255,255,0.1)"/>
+                        
+                        <!-- Screen Content - Simple Chart -->
+                        <polyline points="65,105 80,95 95,100 110,85 125,90" stroke="#10b981" stroke-width="2" fill="none"/>
+                        <circle cx="80" cy="95" r="3" fill="#10b981"/>
+                        <circle cx="110" cy="85" r="3" fill="#10b981"/>
+                        
+                        <!-- Monitor Stand -->
+                        <rect x="90" y="130" width="20" height="15" fill="rgba(255,255,255,0.2)"/>
+                        <rect x="75" y="145" width="50" height="6" rx="2" fill="rgba(255,255,255,0.25)"/>
+                        
+                        <!-- Shopping Cart -->
+                        <path d="M140 120 L150 120 L155 140 L145 140 Z" fill="rgba(249,115,22,0.6)" stroke="#fb923c" stroke-width="1.5"/>
+                        <circle cx="135" cy="130" r="8" fill="rgba(249,115,22,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+                        <circle cx="155" cy="130" r="8" fill="rgba(249,115,22,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+                        
+                        <!-- Checkmark Badge -->
+                        <circle cx="160" cy="80" r="18" fill="#10b981" stroke="white" stroke-width="2"/>
+                        <path d="M152 80 L158 86 L168 74" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        
+                        <!-- Decorative Elements -->
+                        <circle cx="40" cy="50" r="8" fill="rgba(16,185,129,0.3)"/>
+                        <circle cx="170" cy="160" r="12" fill="rgba(249,115,22,0.2)"/>
+                        <circle cx="30" cy="150" r="6" fill="rgba(20,184,166,0.25)"/>
                     </svg>
-                    <span><?php echo htmlspecialchars($error); ?></span>
-                </div>
-            <?php endif; ?>
-            
-            <?php if (!empty($success)): ?>
-                <div class="alert-modern alert-success">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
-                    <span><?php echo htmlspecialchars($success); ?></span>
-                </div>
-            <?php endif; ?>
-            
-            <form method="POST" action="" id="loginForm" class="auth-form" novalidate>
-                <div class="form-group-modern">
-                    <label for="username" class="form-label-modern">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                        Username
-                    </label>
-                    <input type="text" 
-                           class="form-control-modern" 
-                           id="username" 
-                           name="username" 
-                           placeholder="Masukkan username"
-                           value="<?php echo htmlspecialchars($username); ?>"
-                           required
-                           minlength="3"
-                           autocomplete="username">
-                    <div class="invalid-feedback-modern">Username minimal 3 karakter</div>
                 </div>
                 
-                <div class="form-group-modern">
-                    <label for="password" class="form-label-modern">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                        Password
-                    </label>
-                    <input type="password" 
-                           class="form-control-modern" 
-                           id="password" 
-                           name="password" 
-                           placeholder="Masukkan password"
-                           required
-                           minlength="6"
-                           autocomplete="current-password">
-                    <div class="invalid-feedback-modern">Password minimal 6 karakter</div>
-                </div>
-                
-                <div class="form-footer-modern">
-                    <button type="submit" class="btn-primary-modern" id="submitBtn" disabled>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
-                            <polyline points="10 17 15 12 10 7"/>
-                            <line x1="15" y1="12" x2="3" y2="12"/>
-                        </svg>
-                        Masuk ke Dashboard
-                    </button>
-                </div>
-            </form>
-            
-            <div class="auth-divider">
-                <span>atau</span>
-            </div>
-            
-            <div class="auth-footer-modern">
-                <p>Belum punya akun? <a href="register.php" class="auth-link">Daftar gratis</a></p>
+                <h2 class="illustration-title">Selamat Datang Kembali</h2>
+                <p class="illustration-text">
+                    Kelola bisnis Anda lebih efisien dengan sistem kasir modern. 
+                    Mulai hari ini dengan transaksi yang lebih cepat dan laporan yang akurat.
+                </p>
             </div>
         </div>
         
-        <!-- Back to Home -->
-        <a href="../index.php" class="back-to-home">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-            </svg>
-            Kembali ke Beranda
-        </a>
+        <!-- Right Panel: Login Form -->
+        <div class="auth-form-panel">
+            <div class="auth-form-container">
+                <div class="auth-form-header">
+                    <div class="auth-form-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                            <defs>
+                                <linearGradient id="formLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#d1fae5;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="8" width="48" height="48" rx="12" fill="url(#formLogoGradient)"/>
+                            <path d="M20 32 L28 40 L44 24" stroke="#10b981" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                    <h1 class="auth-form-title">Masuk ke Akun</h1>
+                    <p class="auth-form-subtitle">Masukkan kredensial Anda untuk mengakses dashboard</p>
+                </div>
+                
+                <?php if (!empty($error)): ?>
+                    <div class="alert-modern alert-error">
+                        <i class="bi bi-exclamation-circle-fill"></i>
+                        <span><?php echo htmlspecialchars($error); ?></span>
+                    </div>
+                <?php endif; ?>
+                
+                <?php if (!empty($success)): ?>
+                    <div class="alert-modern alert-success">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span><?php echo htmlspecialchars($success); ?></span>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="POST" action="" id="loginForm" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="username" class="form-label">
+                            <i class="bi bi-person"></i>
+                            Username
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="username" 
+                               name="username" 
+                               placeholder="Masukkan username"
+                               value="<?php echo htmlspecialchars($username); ?>"
+                               required
+                               minlength="3"
+                               autocomplete="username">
+                        <div class="invalid-feedback">Username minimal 3 karakter</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">
+                            <i class="bi bi-lock"></i>
+                            Password
+                        </label>
+                        <input type="password" 
+                               class="form-control" 
+                               id="password" 
+                               name="password" 
+                               placeholder="Masukkan password"
+                               required
+                               minlength="6"
+                               autocomplete="current-password">
+                        <div class="invalid-feedback">Password minimal 6 karakter</div>
+                    </div>
+                    
+                    <div class="form-footer-modern">
+                        <button type="submit" class="btn-submit" id="submitBtn" disabled>
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Masuk ke Dashboard
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>atau</span>
+                </div>
+                
+                <div class="auth-form-footer">
+                    <p>Belum punya akun? <a href="register.php" class="auth-link">Daftar gratis</a></p>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- Bootstrap 5.3.8 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
     <!-- Auth Validation Script -->
-    <script src="../assets/js/auth-validation.js"></script>
     <script>
-        // Initialize validation for login form
-        document.addEventListener('DOMContentLoaded', function() {
-            initAuthValidation('loginForm', 'submitBtn');
-        });
+        // Simple form validation
+        const form = document.getElementById('loginForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        
+        function validateForm() {
+            const usernameValid = usernameInput.value.length >= 3;
+            const passwordValid = passwordInput.value.length >= 6;
+            
+            if (usernameValid && passwordValid) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+        
+        usernameInput.addEventListener('input', validateForm);
+        passwordInput.addEventListener('input', validateForm);
     </script>
 </body>
 </html>

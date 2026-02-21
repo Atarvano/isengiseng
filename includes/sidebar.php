@@ -1,24 +1,24 @@
 <?php
 /**
  * Role-filtered sidebar navigation component
+ * SMK Certification Quality
  * 
  * Displays navigation menu items based on user role:
  * - Admin: sees all menu items (Dashboard, Transactions, Products, Reports, Users, Profile)
  * - Cashier: sees only transaction-related items (Dashboard, Transactions, Profile)
- * 
- * @package MiniCashier
  */
 
 // Get user role from session (set during login)
 $role = $_SESSION['user_role'] ?? 'cashier';
 $username = $_SESSION['username'] ?? 'User';
+$initials = strtoupper(substr($username, 0, 2));
 
 // Get current page for active state
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
 ?>
 
 <!-- Sidebar -->
-<nav class="sidebar">
+<nav class="sidebar" id="sidebar">
     <div class="sidebar-header">
         <!-- Sidebar Brand -->
         <div class="sidebar-brand">
@@ -26,12 +26,12 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="28" height="28">
                     <defs>
                         <linearGradient id="sidebarLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#d1fae5;stop-opacity:1" />
                         </linearGradient>
                     </defs>
                     <rect x="8" y="8" width="48" height="48" rx="12" fill="url(#sidebarLogoGradient)"/>
-                    <path d="M20 32 L28 40 L44 24" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <path d="M20 32 L28 40 L44 24" stroke="#10b981" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
             </div>
             <h5 class="sidebar-title mb-0">KasirKu</h5>
@@ -107,4 +107,39 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             </li>
         </ul>
     </div>
+    
+    <!-- Sidebar Footer -->
+    <div style="padding: var(--space-lg); margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1);">
+        <form action="/auth/logout.php" method="POST">
+            <button type="submit" class="nav-link" style="background: none; border: none; color: rgba(255,255,255,0.75); width: 100%; text-align: left; cursor: pointer;">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+            </button>
+        </form>
+    </div>
 </nav>
+
+<!-- Mobile Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()" style="display: none;"></div>
+
+<script>
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    
+    sidebar.classList.toggle('show');
+    
+    if (sidebar.classList.contains('show')) {
+        overlay.style.display = 'block';
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.right = '0';
+        overlay.style.bottom = '0';
+        overlay.style.background = 'rgba(0,0,0,0.5)';
+        overlay.style.zIndex = '99';
+    } else {
+        overlay.style.display = 'none';
+    }
+}
+</script>
