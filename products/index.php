@@ -134,15 +134,13 @@ if (!$result) {
                                                    title="Edit produk ini">
                                                     <i class="bi bi-pencil"></i> Edit
                                                 </a>
-                                                <button type="button" 
-                                                        class="btn btn-danger btn-sm"
-                                                        data-bs-toggle="modal" 
-                                                        data-bs-target="#deleteModal"
-                                                        data-id="<?= $row['id'] ?>"
-                                                        data-name="<?= htmlspecialchars($row['name']) ?>"
-                                                        title="Hapus produk ini">
-                                                    <i class="bi bi-trash"></i> Hapus
-                                                </button>
+                                                 <button type="button" 
+                                                         class="btn btn-danger btn-sm delete-btn"
+                                                         data-id="<?= $row['id'] ?>"
+                                                         data-name="<?= htmlspecialchars($row['name']) ?>"
+                                                         title="Hapus produk ini">
+                                                     <i class="bi bi-trash"></i> Hapus
+                                                 </button>
                                             </div>
                                         </td>
                                     </tr>
@@ -225,15 +223,21 @@ $(document).ready(function() {
         }
     });
     
-    // Handle delete modal - populate product name and set delete URL
-    $('#deleteModal').on('show.bs.modal', function (event) {
-        const button = $(event.relatedTarget);
-        const productId = button.data('id');
-        const productName = button.data('name');
+    // Handle delete button click - manually show modal
+    $(document).on('click', '.delete-btn', function(e) {
+        e.preventDefault();
+        const productId = $(this).data('id');
+        const productName = $(this).data('name');
         
-        const modal = $(this);
-        modal.find('#productName').text(productName);
-        modal.find('#confirmDelete').attr('href', 'actions.php?action=delete&id=' + productId);
+        console.log('Delete button clicked:', { id: productId, name: productName });
+        
+        // Populate modal content
+        $('#productName').text(productName);
+        $('#confirmDelete').attr('href', 'actions.php?action=delete&id=' + productId);
+        
+        // Show modal using Bootstrap API
+        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        deleteModal.show();
     });
 });
 </script>
