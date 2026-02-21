@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         // Bind parameters: s=string, d=double, i=integer, s=string, s=string, i=integer
-        mysqli_stmt_bind_param($stmt, "sdissii", 
+        mysqli_stmt_bind_param($stmt, "sdissi", 
             $data['name'], 
             $data['price'], 
             $data['stock'], 
