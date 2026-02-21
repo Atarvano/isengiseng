@@ -2589,32 +2589,41 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-3px);
 }
 
-.footer-heading {
+/* Landing page footer column headings */
+.footer-landing .footer-heading {
     font-size: 1rem;
     font-weight: 700;
     color: white;
     margin-bottom: var(--space-lg);
     font-family: var(--font-display);
+    display: block;
 }
 
-.footer-links ul {
+/* Landing page footer links - vertical column layout */
+.footer-landing .footer-links {
+    display: block;
+}
+
+.footer-landing .footer-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-links li {
+.footer-landing .footer-links li {
+    display: block;
     margin-bottom: var(--space-md);
 }
 
-.footer-links a {
+.footer-landing .footer-links a {
     color: var(--slate-400);
     text-decoration: none;
     font-size: 0.9375rem;
     transition: color var(--transition-fast);
+    display: inline-block;
 }
 
-.footer-links a:hover {
+.footer-landing .footer-links a:hover {
     color: var(--emerald-400);
 }
 
@@ -2737,8 +2746,8 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
     }
     
-    .footer-links,
-    .footer-contact {
+    .footer-landing .footer-links,
+    .footer-landing .footer-contact {
         text-align: center;
     }
 }
@@ -2864,12 +2873,12 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
     }
     
-    .footer-links,
-    .footer-contact {
+    .footer-landing .footer-links,
+    .footer-landing .footer-contact {
         text-align: center;
     }
     
-    .footer-links ul {
+    .footer-landing .footer-links ul {
         display: flex;
         flex-direction: column;
         align-items: center;
