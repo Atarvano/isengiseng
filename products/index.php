@@ -170,10 +170,7 @@ if (!$result) {
 </div><!-- /.row -->
 </div><!-- /.container-fluid -->
 
-</div><!-- /.main-content -->
-</main>
-
-<!-- Delete Confirmation Modal (after main, before footer) -->
+<!-- Delete Confirmation Modal (before footer, still inside main) -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" data-bs-backdrop="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow" style="z-index: 1055;">
