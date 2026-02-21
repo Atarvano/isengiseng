@@ -40,8 +40,8 @@ $initials = strtoupper(substr($username, 0, 2));
         <!-- Sidebar -->
         <?php include 'sidebar.php'; ?>
         
-        <!-- Main Content Area -->
-        <div class="main-content">
+        <!-- Main Content Wrapper -->
+        <div class="main-content-wrapper">
             <!-- Top Navbar -->
             <nav class="top-navbar">
                 <div class="top-navbar-left">

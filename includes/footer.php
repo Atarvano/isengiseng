@@ -12,8 +12,8 @@ $username = $_SESSION['username'] ?? 'Guest';
 
         </div><!-- /.main-content -->
         
-        <!-- Footer -->
-        <footer class="footer mt-auto">
+        <!-- Dashboard Footer -->
+        <footer class="dashboard-footer">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -29,7 +29,8 @@ $username = $_SESSION['username'] ?? 'Guest';
                 </div>
             </div>
         </footer>
-    </div><!-- /.dashboard-wrapper -->
+    </div><!-- /.main-content-wrapper -->
+</div><!-- /.dashboard-wrapper -->
 
 <!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

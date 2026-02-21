@@ -1373,12 +1373,21 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.1);
 }
 
-.main-content {
+.main-content-wrapper {
+    flex: 1;
     margin-left: 280px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
     flex: 1;
     padding: var(--space-2xl);
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .top-navbar {
@@ -1386,7 +1395,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--space-lg) var(--space-xl);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-sm);
-    margin-bottom: var(--space-xl);
+    margin: 0 var(--space-2xl) var(--space-xl);
     border: 1px solid var(--slate-200);
     display: flex;
     justify-content: space-between;
@@ -1485,7 +1494,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--space-xl);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-sm);
-    margin-bottom: var(--space-xl);
+    margin: 0 var(--space-2xl) var(--space-xl);
     border: 1px solid var(--slate-200);
 }
 
@@ -1502,7 +1511,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-/* ===== Footer ===== */
+/* ===== Dashboard Footer ===== */
+.dashboard-footer {
+    background: white;
+    border-top: 1px solid var(--slate-200);
+    padding: var(--space-lg) var(--space-xl);
+    margin-top: auto;
+}
+
+/* ===== Footer (Legacy) ===== */
 .footer {
     background: white;
     border-top: 1px solid var(--slate-200);
@@ -2786,7 +2803,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 260px;
     }
     
-    .main-content {
+    .main-content-wrapper {
         margin-left: 260px;
     }
 }
@@ -2967,7 +2984,7 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(0);
     }
     
-    .main-content {
+    .main-content-wrapper {
         margin-left: 0;
     }
     
