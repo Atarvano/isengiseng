@@ -218,11 +218,22 @@ $(document).ready(function() {
         order: [[0, 'asc']],
         columnDefs: [
             { orderable: false, targets: [7] },
-            { width: '50px', targets: [0] }, // No column
-            { width: '150px', targets: [6, 7] } // Status and Actions
+            { width: '50px', targets: [0] },
+            { width: '150px', targets: [6, 7] }
         ],
         responsive: true,
         dom: '<"row"<"col-md-6"l><"col-md-6"f>>rtip',
+        // Disable automatic data source detection
+        columns: [
+            null, // No
+            null, // Nama Produk
+            null, // Kategori
+            null, // Harga
+            null, // Stok
+            null, // Unit
+            null, // Status
+            null  // Aksi
+        ],
         drawCallback: function() {
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
             tooltipTriggerList.map(function (tooltipTriggerEl) {
