@@ -90,7 +90,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             <!-- Users - Admin Only (Phase 5 - placeholder) -->
             <?php if ($role === 'admin'): ?>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" title="Coming in Phase 5">
+                <a class="nav-link disabled" href="#" title="Akan datang di Fase 5">
                     <i class="bi bi-people"></i>
                     <span>Pengguna <small class="text-white-50">(Segera)</small></span>
                 </a>
