@@ -24,7 +24,13 @@
   3. User can log out from any authenticated page
   4. User can change their password after logging in
   5. Admin sees all features, Cashier only sees transaction features (role-based access enforced)
-**Plans:** TBD
+**Plans:** 4 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Database schema, session config, auth middleware, role middleware
+- [ ] 01-02-PLAN.md — Landing page, login form, registration form with password hashing
+- [ ] 01-03-PLAN.md — Logout handler, password change, session timeout warning system
+- [ ] 01-04-PLAN.md — Admin/cashier dashboards, role-filtered sidebar, profile page
 
 ### Phase 2: Product Management
 **Goal**: Admin can manage product inventory with full CRUD operations
