@@ -27,7 +27,7 @@
 **Plans:** 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Database schema, session config, auth middleware, role middleware
+- [x] 01-01-PLAN.md — Database schema, session config, auth middleware, role middleware
 - [ ] 01-02-PLAN.md — Landing page, login form, registration form with password hashing
 - [ ] 01-03-PLAN.md — Logout handler, password change, session timeout warning system
 - [ ] 01-04-PLAN.md — Admin/cashier dashboards, role-filtered sidebar, profile page
@@ -83,7 +83,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Authentication | 0/0 | Not started | - |
+| 1. Foundation & Authentication | 1/4 | In progress | Plan 01: Database & Middleware |
 | 2. Product Management | 0/0 | Not started | - |
 | 3. Transaction Processing | 0/0 | Not started | - |
 | 4. Dashboard & Reporting | 0/0 | Not started | - |
