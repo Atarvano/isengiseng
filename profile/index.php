@@ -29,7 +29,7 @@ $initials = strtoupper(substr($username, 0, 2));
             <h1 class="dashboard-title">Profil Saya</h1>
             <p class="dashboard-subtitle mb-0">Kelola informasi akun Anda</p>
         </div>
-        <div>
+        <div class="d-flex align-items-center gap-2">
             <span class="badge <?php echo $role === 'admin' ? 'bg-primary' : 'bg-success'; ?> px-3 py-2 rounded-pill">
                 <i class="bi bi-shield-<?php echo $role === 'admin' ? 'check' : 'plus'; ?> me-1"></i>
                 <?php echo ucfirst($role); ?>
