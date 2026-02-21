@@ -21,7 +21,7 @@ $username = $_SESSION['username'] ?? 'User';
 <div class="dashboard-header">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
         <div>
-            <h1 class="dashboard-title">Cashier Dashboard</h1>
+            <h1 class="dashboard-title">Dashboard Kasir</h1>
             <p class="dashboard-subtitle mb-0">Kelola transaksi dengan cepat dan mudah</p>
         </div>
         <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
@@ -29,7 +29,7 @@ $username = $_SESSION['username'] ?? 'User';
                 <i class="bi bi-person-check me-1"></i><?php echo ucfirst($role); ?>
             </span>
             <span class="text-muted">
-                <small>Welcome, <strong><?php echo htmlspecialchars($username); ?></strong></small>
+                <small><?php echo htmlspecialchars($username); ?></small>
             </span>
         </div>
     </div>
@@ -39,8 +39,8 @@ $username = $_SESSION['username'] ?? 'User';
 <div class="alert alert-success d-flex align-items-center mb-4" role="alert">
     <i class="bi bi-check-circle-fill me-3 fs-3"></i>
     <div>
-        <strong>Selamat datang kembali, <?php echo htmlspecialchars($username); ?>!</strong>
-        <p class="mb-0">Siap untuk memproses transaksi? Gunakan tombol aksi cepat di bawah untuk memulai penjualan baru.</p>
+        <strong>Selamat datang, <?php echo htmlspecialchars($username); ?>!</strong>
+        <p class="mb-0">Siap memproses transaksi? Gunakan tombol aksi cepat untuk memulai penjualan baru.</p>
     </div>
 </div>
 

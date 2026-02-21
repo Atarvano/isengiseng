@@ -21,7 +21,7 @@ $username = $_SESSION['username'] ?? 'Admin';
 <div class="dashboard-header">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
         <div>
-            <h1 class="dashboard-title">Admin Dashboard</h1>
+            <h1 class="dashboard-title">Dashboard Admin</h1>
             <p class="dashboard-subtitle mb-0">Kelola sistem dengan akses penuh</p>
         </div>
         <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
@@ -29,7 +29,7 @@ $username = $_SESSION['username'] ?? 'Admin';
                 <i class="bi bi-shield-check me-1"></i>Admin
             </span>
             <span class="text-muted">
-                <small>Welcome, <strong><?php echo htmlspecialchars($username); ?></strong></small>
+                <small><?php echo htmlspecialchars($username); ?></small>
             </span>
         </div>
     </div>
@@ -39,8 +39,8 @@ $username = $_SESSION['username'] ?? 'Admin';
 <div class="alert alert-info d-flex align-items-center mb-4" role="alert">
     <i class="bi bi-info-circle-fill me-3 fs-3"></i>
     <div>
-        <strong>Selamat datang kembali, <?php echo htmlspecialchars($username); ?>!</strong>
-        <p class="mb-0">Anda memiliki akses penuh ke semua fitur sistem termasuk produk, laporan, dan manajemen pengguna.</p>
+        <strong>Selamat datang, <?php echo htmlspecialchars($username); ?>!</strong>
+        <p class="mb-0">Anda memiliki akses penuh ke semua fitur: produk, transaksi, laporan, dan manajemen pengguna.</p>
     </div>
 </div>
 
