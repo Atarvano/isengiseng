@@ -1,0 +1,338 @@
+/**
+ * Mini Cashier - Custom Styles
+ * 
+ * Professional SaaS aesthetic with split-screen landing page layout.
+ * Light theme with minimalist design.
+ */
+
+/* ===== CSS Variables ===== */
+:root {
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+/* ===== Global Styles ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ===== Landing Page Container ===== */
+.landing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Split-Screen Layout ===== */
+.landing-container .container-fluid {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.landing-container .row {
+    width: 100%;
+    margin: 0;
+}
+
+/* Branding Section (Left) */
+.branding-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+}
+
+.branding-content {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.logo-placeholder {
+    opacity: 0.9;
+}
+
+.brand-title {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.brand-tagline {
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.features-preview {
+    margin-top: 3rem;
+}
+
+.feature-list {
+    padding-left: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* Auth Section (Right) */
+.auth-section {
+    background-color: var(--bg-light);
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 1rem;
+    max-width: 450px;
+    width: 100%;
+}
+
+.auth-card .card-title {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.auth-buttons .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.auth-buttons .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.auth-buttons .btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-buttons .btn-outline-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===== Footer ===== */
+.landing-footer {
+    background-color: white;
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.landing-footer a {
+    transition: color 0.2s ease;
+}
+
+.landing-footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 991.98px) {
+    .branding-section,
+    .auth-section {
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+    
+    .branding-section {
+        order: 1;
+    }
+    
+    .auth-section {
+        order: 2;
+    }
+    
+    .branding-content {
+        padding: 1rem;
+    }
+    
+    .brand-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .brand-title {
+        font-size: 2rem;
+    }
+    
+    .brand-tagline {
+        font-size: 1rem;
+    }
+    
+    .auth-card {
+        margin: 1rem;
+    }
+    
+    .landing-footer {
+        text-align: center;
+    }
+    
+    .landing-footer .col-md-6 {
+        text-align: center !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .landing-footer a {
+        display: block;
+        margin: 0.25rem 0;
+    }
+}
+
+/* ===== Authentication Pages Styles ===== */
+.auth-page-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+}
+
+.auth-page-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    max-width: 450px;
+    width: 100%;
+}
+
+.auth-page-card .card-body {
+    padding: 3rem;
+}
+
+.auth-page-card .card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.auth-page-card .form-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.auth-page-card .form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-page-card .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.auth-page-card .form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.auth-page-card .form-control.is-valid {
+    border-color: #198754;
+}
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.auth-page-card .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.auth-page-card .btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.auth-page-card .btn-primary:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.auth-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.auth-links a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.alert {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Validation States ===== */
+.validation-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.validation-error.visible {
+    display: block;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-card,
+.auth-page-card {
+    animation: fadeIn 0.5s ease-out;
+}
