@@ -29,8 +29,8 @@
 Plans:
 - [x] 01-01-PLAN.md — Database schema, session config, auth middleware, role middleware
 - [x] 01-02-PLAN.md — Landing page, login form, registration form with password hashing
-- [ ] 01-03-PLAN.md — Logout handler, password change, session timeout warning system
-- [ ] 01-04-PLAN.md — Admin/cashier dashboards, role-filtered sidebar, profile page
+- [x] 01-03-PLAN.md — Logout handler, password change, session timeout warning system
+- [x] 01-04-PLAN.md — Admin/cashier dashboards, role-filtered sidebar, profile page
 
 ### Phase 2: Product Management
 **Goal**: Admin can manage product inventory with full CRUD operations
@@ -90,4 +90,4 @@ Plans:
 | 5. User Management | 0/0 | Not started | - |
 
 ---
-*Last updated: 2026-02-21 by GSD Executor (Plan 02 complete)*
+*Last updated: 2026-02-21 by GSD Executor (Plan 04 complete)*
