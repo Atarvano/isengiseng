@@ -168,11 +168,6 @@ if (!$result) {
     </div>
 </div>
 
-</div><!-- /.main-content -->
-</main>
-
-<?php include '../includes/footer.php'; ?>
-
 <!-- Delete Confirmation Modal (outside main-content to avoid overflow:hidden) -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" data-bs-backdrop="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -202,6 +197,11 @@ if (!$result) {
         </div>
     </div>
 </div>
+
+</div><!-- /.main-content -->
+</main>
+
+<?php include '../includes/footer.php'; ?>
 
 <!-- DataTables Initialization with Indonesian Localization -->
 <script>
