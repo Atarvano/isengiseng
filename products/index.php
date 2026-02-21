@@ -168,7 +168,12 @@ if (!$result) {
     </div>
 </div>
 
-<!-- Delete Confirmation Modal -->
+</div><!-- /.main-content -->
+</main>
+
+<?php include '../includes/footer.php'; ?>
+
+<!-- Delete Confirmation Modal (outside main-content to avoid overflow:hidden) -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" data-bs-backdrop="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow" style="z-index: 1055;">
@@ -198,26 +203,23 @@ if (!$result) {
     </div>
 </div>
 
-<?php include '../includes/footer.php'; ?>
-
 <!-- DataTables Initialization with Indonesian Localization -->
 <script>
 $(document).ready(function() {
     // Initialize DataTable with Indonesian language
     $('#productsTable').DataTable({
         language: {
-            url: '//cdn.datatables.net/plug-ins/2.0.0/i18n/id.json'
+            url: 'https://cdn.datatables.net/plug-ins/2.0.8/i18n/id.json'
         },
         pageLength: 10,
         lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]],
-        order: [[0, 'asc']], // Sort by No (first column) ascending
+        order: [[0, 'asc']],
         columnDefs: [
-            { orderable: false, targets: [7] } // Disable sorting on Actions column
+            { orderable: false, targets: [7] }
         ],
         responsive: true,
         dom: '<"row"<"col-md-6"l><"col-md-6"f>>rtip',
         drawCallback: function() {
-            // Re-initialize tooltips after DataTables redraw
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
             tooltipTriggerList.map(function (tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl)
