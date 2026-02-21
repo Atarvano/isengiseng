@@ -24,11 +24,11 @@ Requirements for certification completion. Each maps to roadmap phases.
 
 ### Product Management (Admin Only)
 
-- [ ] **PROD-01**: Admin can view list of products (barang)
+- [x] **PROD-01**: Admin can view list of products (barang)
 - [ ] **PROD-02**: Admin can add new product with name, price, stock
 - [ ] **PROD-03**: Admin can edit existing product details
 - [ ] **PROD-04**: Admin can delete products
-- [ ] **PROD-05**: Stock cannot be negative (validation)
+- [x] **PROD-05**: Stock cannot be negative (validation)
 
 ### Transaction Processing (Cashier)
 
@@ -94,11 +94,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ROLE-01 | Phase 1 | Pending |
 | ROLE-02 | Phase 1 | Pending |
 | ROLE-03 | Phase 1 | Complete |
-| PROD-01 | Phase 2 | Pending |
+| PROD-01 | Phase 2 | Complete |
 | PROD-02 | Phase 2 | Pending |
 | PROD-03 | Phase 2 | Pending |
 | PROD-04 | Phase 2 | Pending |
-| PROD-05 | Phase 2 | Pending |
+| PROD-05 | Phase 2 | Complete |
 | TRANS-01 | Phase 3 | Pending |
 | TRANS-02 | Phase 3 | Pending |
 | TRANS-03 | Phase 3 | Pending |
