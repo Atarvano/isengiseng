@@ -50,10 +50,15 @@ $initials = strtoupper(substr($username, 0, 2));
                         <i class="bi bi-list"></i>
                     </button>
                     
-                    <!-- Page Title (Optional, can be customized per page) -->
+                    <!-- Page Title - Dynamic based on current page -->
                     <div>
-                        <h5 style="margin: 0; font-family: var(--font-display); font-weight: 700;">Dashboard</h5>
-                        <small style="color: var(--slate-500); font-size: 0.85rem;">Selamat datang kembali</small>
+                        <h5 style="margin: 0; font-family: var(--font-display); font-weight: 700;">
+                            <?php 
+                            $page_title = basename(dirname($_SERVER['PHP_SELF']));
+                            echo ucfirst(str_replace('_', ' ', $page_title));
+                            ?>
+                        </h5>
+                        <small style="color: var(--slate-500); font-size: 0.85rem;">Kelola sistem dengan mudah</small>
                     </div>
                 </div>
                 
