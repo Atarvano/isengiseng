@@ -203,6 +203,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     transition: color var(--transition-fast);
     position: relative;
+    padding: var(--space-sm) 0;
 }
 
 .navbar-link::after {
@@ -227,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-actions {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
 }
 
 .btn-navbar {
@@ -1956,16 +1957,21 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feature-card {
     background: white;
     border: 1px solid var(--slate-200);
     border-radius: var(--radius-2xl);
-    padding: var(--space-2xl);
+    padding: var(--space-xl) var(--space-2xl);
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .feature-card::before {
@@ -2022,18 +2028,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-icon-wrapper {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
 }
 
 .feature-icon {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     background: linear-gradient(135deg, var(--emerald-500) 0%, var(--teal-500) 100%);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
 }
 
 .feature-card.featured .feature-icon {
@@ -2042,7 +2048,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-icon i {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: white;
 }
 
