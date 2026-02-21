@@ -169,9 +169,9 @@ if (!$result) {
 </div>
 
 <!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" data-bs-backdrop="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
+        <div class="modal-content border-0 shadow" style="z-index: 1055;">
             <div class="modal-header bg-danger text-white border-0">
                 <h5 class="modal-title" id="deleteModalLabel">
                     <i class="bi bi-exclamation-triangle me-2"></i>Konfirmasi Hapus
@@ -237,8 +237,16 @@ $(document).ready(function() {
         $('#productName').text(productName);
         $('#confirmDelete').attr('href', 'actions.php?action=delete&id=' + productId);
         
-        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        // Show modal using Bootstrap API with explicit options
+        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'), {
+            backdrop: true,
+            keyboard: true
+        });
+        
+        // Force show the modal
         deleteModal.show();
+        
+        console.log('Modal shown:', deleteModal);
     });
 });
 </script>
