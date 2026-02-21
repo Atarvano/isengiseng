@@ -28,7 +28,7 @@
 
 Plans:
 - [x] 01-01-PLAN.md — Database schema, session config, auth middleware, role middleware
-- [ ] 01-02-PLAN.md — Landing page, login form, registration form with password hashing
+- [x] 01-02-PLAN.md — Landing page, login form, registration form with password hashing
 - [ ] 01-03-PLAN.md — Logout handler, password change, session timeout warning system
 - [ ] 01-04-PLAN.md — Admin/cashier dashboards, role-filtered sidebar, profile page
 
@@ -83,11 +83,11 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Authentication | 1/4 | In progress | Plan 01: Database & Middleware |
+| 1. Foundation & Authentication | 2/4 | In progress | Plan 01: Database & Middleware, Plan 02: Landing Page & Auth Forms |
 | 2. Product Management | 0/0 | Not started | - |
 | 3. Transaction Processing | 0/0 | Not started | - |
 | 4. Dashboard & Reporting | 0/0 | Not started | - |
 | 5. User Management | 0/0 | Not started | - |
 
 ---
-*Last updated: 2026-02-21 by GSD Roadmapper*
+*Last updated: 2026-02-21 by GSD Executor (Plan 02 complete)*

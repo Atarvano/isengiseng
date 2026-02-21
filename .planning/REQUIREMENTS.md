@@ -9,18 +9,18 @@ Requirements for certification completion. Each maps to roadmap phases.
 
 ### Landing & Authentication
 
-- [ ] **LAND-01**: Landing page displays with login/register links and app branding
-- [ ] **AUTH-01**: User can login with username and password
-- [ ] **AUTH-02**: Password is hashed using password_hash() before storage
+- [x] **LAND-01**: Landing page displays with login/register links and app branding
+- [x] **AUTH-01**: User can login with username and password
+- [x] **AUTH-02**: Password is hashed using password_hash() before storage
 - [ ] **AUTH-03**: User can logout from any authenticated page
 - [ ] **AUTH-04**: User can change their password after login
-- [ ] **AUTH-05**: Session persists across page navigation
+- [x] **AUTH-05**: Session persists across page navigation
 
 ### Role Management
 
 - [ ] **ROLE-01**: Admin role can access all admin features
 - [ ] **ROLE-02**: Kasir (Cashier) role can only access transaction features
-- [ ] **ROLE-03**: Role check enforced server-side on every protected page
+- [x] **ROLE-03**: Role check enforced server-side on every protected page
 
 ### Product Management (Admin Only)
 
@@ -85,15 +85,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| LAND-01 | Phase 1 | Pending |
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
+| LAND-01 | Phase 1 | Complete |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Pending |
 | AUTH-04 | Phase 1 | Pending |
-| AUTH-05 | Phase 1 | Pending |
+| AUTH-05 | Phase 1 | Complete |
 | ROLE-01 | Phase 1 | Pending |
 | ROLE-02 | Phase 1 | Pending |
-| ROLE-03 | Phase 1 | Pending |
+| ROLE-03 | Phase 1 | Complete |
 | PROD-01 | Phase 2 | Pending |
 | PROD-02 | Phase 2 | Pending |
 | PROD-03 | Phase 2 | Pending |
@@ -121,4 +121,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-21*
-*Last updated: 2026-02-21 after initial definition*
+*Last updated: 2026-02-21 by GSD Executor (Plan 02 complete)*
