@@ -32,8 +32,15 @@ $username = $_SESSION['username'] ?? 'Guest';
     </div><!-- /.main-content-wrapper -->
 </div><!-- /.dashboard-wrapper -->
 
+<!-- jQuery 3.7.x (required for DataTables) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.0.0/js/dataTables.bootstrap5.js"></script>
 
 <!-- Session Manager -->
 <script src="/assets/js/session-manager.js"></script>
