@@ -43,7 +43,13 @@ Plans:
   3. Admin can edit existing product details
   4. Admin can delete products from inventory
   5. System rejects products with negative stock values
-**Plans:** TBD
+**Plans:** 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Database schema + config (PROD-01, PROD-05)
+- [ ] 02-02-PLAN.md — Product list with DataTables (PROD-01)
+- [ ] 02-03-PLAN.md — Create + Edit forms (PROD-02, PROD-03)
+- [ ] 02-04-PLAN.md — Delete with modal (PROD-04)
 
 ### Phase 3: Transaction Processing
 **Goal**: Cashier can process sales transactions with automatic stock management
