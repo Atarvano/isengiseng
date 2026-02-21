@@ -198,6 +198,8 @@ if (!$result) {
     </div>
 </div>
 
+<?php include '../includes/footer.php'; ?>
+
 <!-- DataTables Initialization with Indonesian Localization -->
 <script>
 $(document).ready(function() {
@@ -235,11 +237,8 @@ $(document).ready(function() {
         $('#productName').text(productName);
         $('#confirmDelete').attr('href', 'actions.php?action=delete&id=' + productId);
         
-        // Show modal using Bootstrap API
         var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
         deleteModal.show();
     });
 });
 </script>
-
-<?php include '../includes/footer.php'; ?>
