@@ -5,9 +5,16 @@
  * 
  * Displays all products in a DataTables table with sorting, pagination, and search.
  * Shows low stock warnings and action buttons for edit/delete.
+ * 
+ * Access: Admin only
  */
 
-session_start();
+// Session configuration and auth checks
+require_once '../includes/session_config.php';
+require_once '../includes/auth_check.php';
+require_once '../includes/role_check.php';
+require_role('admin'); // Admin-only access for product management
+
 require_once '../config/database.php';
 
 // Fetch all active products ordered by creation date
