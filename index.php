@@ -2,112 +2,229 @@
 /**
  * Mini Cashier - Landing Page
  * 
- * Main entry point with split-screen layout showcasing branding and authentication options.
+ * Main entry point with modern split-screen layout.
+ * Professional POS system for Indonesian small businesses.
  * 
  * @link auth/login.php Login page
  * @link auth/register.php Registration page
  */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Cashier - Simple POS for Small Business</title>
+    <title>KasirKu - Sistem Kasir Modern untuk UMKM</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans for modern Indonesian tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap 5.3.8 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Custom Styles -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="landing-container">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <!-- Left Side: Branding -->
-                <div class="col-lg-6 branding-section d-flex flex-column justify-content-center">
-                    <div class="branding-content">
-                        <div class="logo-placeholder mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
-                                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
-                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+    <div class="landing-wrapper">
+        <!-- Animated Background Elements -->
+        <div class="bg-mesh-gradient"></div>
+        <div class="bg-grid-overlay"></div>
+        
+        <!-- Left Panel: Brand Story -->
+        <div class="brand-panel">
+            <div class="brand-content">
+                <!-- Logo Mark -->
+                <div class="logo-mark mb-4">
+                    <div class="logo-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="logo-icon">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="8" width="48" height="48" rx="12" fill="url(#logoGradient)"/>
+                            <path d="M20 32 L28 40 L44 24" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Brand Typography -->
+                <h1 class="brand-headline">
+                    <span class="brand-name">KasirKu</span>
+                    <span class="brand-descriptor">Solusi Kasir<br/><span class="highlight">UMKM Indonesia</span></span>
+                </h1>
+                
+                <p class="brand-story">
+                    Kelola toko Anda lebih cerdas dengan sistem kasir modern yang sederhana, 
+                    cepat, dan terjangkau. Tingkatkan penjualan, pantau stok, dan analisis 
+                    bisnis Anda dalam satu platform.
+                </p>
+                
+                <!-- Feature Cards -->
+                <div class="feature-showcase">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
                             </svg>
                         </div>
-                        <h1 class="brand-title display-4 fw-bold mb-3">Mini Cashier</h1>
-                        <p class="brand-tagline lead mb-4">Simple POS for Small Business</p>
-                        
-                        <div class="features-preview mt-5">
-                            <h3 class="h5 text-muted mb-3">Features</h3>
-                            <ul class="feature-list list-unstyled">
-                                <li class="feature-item mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle-fill text-success me-2" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                    </svg>
-                                    Product Management
-                                </li>
-                                <li class="feature-item mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle-fill text-success me-2" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                    </svg>
-                                    Transaction Processing
-                                </li>
-                                <li class="feature-item mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle-fill text-success me-2" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                    </svg>
-                                    Sales Reports
-                                </li>
-                            </ul>
+                        <div class="feature-text">
+                            <h4>Kelola Produk</h4>
+                            <p>Input dan pantau ratusan produk dengan mudah. Track stok otomatis setiap transaksi.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                                <line x1="2" y1="10" x2="22" y2="10"/>
+                                <line x1="7" y1="15" x2="7.01" y2="15"/>
+                                <line x1="11" y1="15" x2="13" y2="15"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Transaksi Cepat</h4>
+                            <p>Proses pembayaran dalam hitungan detik. Tampilan sederhana untuk kasir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Laporan Penjualan</h4>
+                            <p>Grafik dan statistik real-time. Ambil keputusan berdasarkan data akurat.</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Right Side: Login Form Preview -->
-                <div class="col-lg-6 auth-section d-flex flex-column justify-content-center">
-                    <div class="auth-card card border-0 shadow-lg">
-                        <div class="card-body p-5">
-                            <h2 class="card-title h3 mb-4">Welcome Back</h2>
-                            <p class="text-muted mb-4">Sign in to access your Mini Cashier dashboard</p>
-                            
-                            <div class="auth-buttons d-grid gap-3">
-                                <a href="auth/login.php" class="btn btn-primary btn-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right me-2" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
-                                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                                    </svg>
-                                    Login
-                                </a>
-                                <a href="auth/register.php" class="btn btn-outline-secondary btn-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus me-2" viewBox="0 0 16 16">
-                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
-                                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
-                                    </svg>
-                                    Register
-                                </a>
-                            </div>
-                        </div>
+                <!-- Trust Indicators -->
+                <div class="trust-section">
+                    <div class="trust-item">
+                        <span class="trust-number">100%</span>
+                        <span class="trust-label">Gratis Selamanya</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">Tanpa</span>
+                        <span class="trust-label">Batasan Transaksi</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">Offline</span>
+                        <span class="trust-label">Bisa Tanpa Internet</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="landing-footer">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0 text-muted">&copy; <?php echo date('Y'); ?> Mini Cashier. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-muted text-decoration-none me-3">Documentation</a>
-                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-                    <a href="#" class="text-muted text-decoration-none">About</a>
-                </div>
+            
+            <!-- Brand Footer -->
+            <div class="brand-footer">
+                <p class="made-with-love">
+                    <span class="heart">❤️</span> Dibuat untuk UMKM Indonesia
+                </p>
             </div>
         </div>
-    </footer>
-    
-    <!-- Bootstrap 5.3.8 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Right Panel: Auth Portal -->
+        <div class="auth-panel">
+            <div class="auth-portal">
+                <div class="portal-header">
+                    <h2 class="portal-title">Selamat Datang</h2>
+                    <p class="portal-subtitle">Masuk untuk mulai mengelola toko Anda</p>
+                </div>
+                
+                <div class="auth-actions">
+                    <a href="auth/login.php" class="auth-card-btn primary">
+                        <div class="auth-card-content">
+                            <div class="auth-card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                                    <polyline points="10 17 15 12 10 7"/>
+                                    <line x1="15" y1="12" x2="3" y2="12"/>
+                                </svg>
+                            </div>
+                            <div class="auth-card-text">
+                                <span class="auth-card-label">Masuk ke Akun</span>
+                                <span class="auth-card-hint">Sudah punya akun</span>
+                            </div>
+                        </div>
+                        <div class="auth-card-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"/>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="auth/register.php" class="auth-card-btn secondary">
+                        <div class="auth-card-content">
+                            <div class="auth-card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="8.5" cy="7" r="4"/>
+                                    <line x1="20" y1="8" x2="20" y2="14"/>
+                                    <line x1="23" y1="11" x2="17" y2="11"/>
+                                </svg>
+                            </div>
+                            <div class="auth-card-text">
+                                <span class="auth-card-label">Daftar Gratis</span>
+                                <span class="auth-card-hint">Mulai dalam 30 detik</span>
+                            </div>
+                        </div>
+                        <div class="auth-card-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Benefits List -->
+                <div class="quick-benefits">
+                    <div class="benefit-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>Setup 2 menit, langsung pakai</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>Tanpa kartu kredit</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>Support lokal Indonesia</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Auth Panel Footer -->
+            <div class="auth-footer">
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Dokumentasi</a>
+                    <span class="footer-divider">•</span>
+                    <a href="#" class="footer-link">Privasi</a>
+                    <span class="footer-divider">•</span>
+                    <a href="#" class="footer-link">Tentang</a>
+                </div>
+                <p class="copyright">&copy; <?php echo date('Y'); ?> KasirKu. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

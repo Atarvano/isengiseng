@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "read": {
+      "C:/laragon/www/QwenSertifikasi/.opencode/get-shit-done/*": "allow"
+    },
+    "external_directory": {
+      "C:/laragon/www/QwenSertifikasi/.opencode/get-shit-done/*": "allow"
+    }
+  }
+}
